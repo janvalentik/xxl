@@ -1,0 +1,56 @@
+<script language="javascript" type="text/javascript" src="modules/tinymce/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript">
+	tinyMCE.init({
+		theme : "advanced",
+		mode : "exact",
+		elements : "wysiwygtarget",
+    relative_urls : true,
+    document_base_url : "../../../",
+    entity_encoding : "raw",
+    language : "cs",
+		plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+		theme_advanced_buttons1 : "undo,|,redo,|,save,|,bold,|,italic,|,underline,|,strikethrough,|,justifyleft,|,justifycenter,|,justifyright,|,justifyfull,|,formatselect",
+		theme_advanced_buttons2 : "bullist,|,numlist,|,link,unlink,|,image,|,help,|,code,|,preview,|,forecolor,|,backcolor,|,tablecontrols,|,hr,|,sub,sup,|,charmap,|,emotions,|,media",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "bottom",
+	  plugi2n_insertdate_dateFormat : "%d.%m.%Y",
+	  plugi2n_insertdate_timeFormat : "%H:%M:%S",
+		paste_use_dialog : false,
+		theme_advanced_resizing : true,
+		theme_advanced_resize_horizontal : false,
+		paste_auto_cleanup_on_paste : true,
+		paste_convert_headers_to_strong : false,
+		paste_strip_class_attributes : "all",
+		paste_remove_spans : false,
+		paste_remove_styles : false,
+    file_browser_callback : "ajaxfilemanager"
+
+	});
+  function ajaxfilemanager(field_name, url, type, win) {
+      var dtm = new Date();
+			var ajaxfilemanagerurl = "/admin/modules/tinymce/plugins/ajaxfilemanager/ajaxfilemanager.php?config=tinymce";
+			switch (type) {
+				case "image":
+					break;
+				case "media":
+					break;
+				case "flash":
+					break;
+				case "file":
+					break;
+				default:
+					return false;
+			}
+            tinyMCE.activeEditor.windowManager.open({
+                url: ajaxfilemanagerurl,
+                width: 782,
+                height: 440,
+                inline : "yes",
+                close_previous : "no"
+            },{
+                window : win,
+                input : field_name
+            });
+    }
+</script>

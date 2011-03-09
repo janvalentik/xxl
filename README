@@ -1,0 +1,9 @@
+Postup instalace Sunlight XXL
+
+- Vše z instalačního balíčku nahrát na server
+- V prohlížeči otevřít adresu http://www.vasedomena.cz/install
+- Postupovat podle pokynů instalace
+- V souboru admin/modules/tinymce/plugins/ajaxfilemanager/inc/config.tinymce.php nastavit
+  define("CONFIG_LOGIN_USERNAME", 'root');
+  define('CONFIG_LOGIN_PASSWORD', 'xxl');
+  potřebné pro přihlašování do ajaxfilemanageru

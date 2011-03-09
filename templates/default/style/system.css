@@ -1,0 +1,173 @@
+/* tagy */
+img {border: none;}
+td {padding: 1px;}
+form {padding: 0; margin: 0;}
+fieldset {margin-bottom: 10px; padding: 8px;}
+legend {font-weight: bold; color: #000000;}
+input, textarea {font-size: 13px; font-family: inherit;}
+
+/* menu */
+.menu {}
+.menu a {}
+.menu a.act {}
+.menu a.hs_closed, .menu a.hs_opened {padding-right: 16px; background-position: right 55%; background-repeat: no-repeat;}
+.menu a.hs_closed {background-image: url("../images/system/hs_open.gif");}
+.menu a.hs_opened {background-image: url("../images/system/hs_close.gif");}
+.menu ul.hs_hidden {display: none;}
+.menu ul.hs_content {padding: 5px 0 10px 10px !important; margin: 0 !important; list-style-type: none !important;}
+.menu ul.hs_content li {border: none !important;}
+
+/* boxy */
+.box-title {padding: 20px 0 6px 0;}
+.box-item {margin-bottom: 6px;}
+.searchform {padding-bottom: 10px;}
+.searchform input.q {width: 70px;}
+
+/* vypis */
+.list-title {margin: 15px 0 3px 0 !important; padding: 0 !important;}
+.list-title a {font-size: 15px;}
+.list-perex {padding: 0 !important; margin: 0 0 3px 0 !important;}
+.list-info {color: #808080; padding: 4px 0 15px 0 !important; clear: both;}
+.list-info span {font-weight: bold;}
+.list-info a {text-decoration: none; color: #808080;}
+.list-image{width:94px; float:left; margin:0px 5px 5px 0px;}
+
+/* clanek */
+.article-navigation {border-bottom: 1px solid #dcdcdc; padding-bottom: 10px; margin-bottom: 15px;}
+.article-perex {font-style: italic; color: #808080;}
+.article-info {width: 672px; color: #808080; padding: 20px 0 10px 0;}
+.article-info td {padding: 10px; line-height: 24px;}
+.article-info a {color: #808080; text-decoration: none;}
+.article-image {width:94px; float:left; margin:0px 5px 5px 0px;}
+.ratetable {border: 1px solid #dcdcdc; padding: 5px;}
+.ratetable td {padding: 0 2px; text-align: center; vertical-align: top;}
+.ratetable tr.r1 * {font-weight: bold;}
+
+/* anketa a shoutbox */
+.poll, .sbox {border: 1px solid #dcdcdc; background-color: #fafafa;}
+.poll-content, .sbox-content {padding: 5px;}
+.poll-question, .sbox-title {text-align: center; padding-bottom: 5px;}
+
+  /* individualni pro anketu */
+  .poll-answer {border-top: 1px solid #dcdcdc; padding: 6px 0 5px 0;}
+  .poll-answer input {padding: 0; margin: 0;}
+  .poll-answer .votebutton {margin: 3px 4px 2px 0 !important;}
+  .poll-answer div {background-image: url("../images/system/votebar.gif"); background-repeat: repeat-x; height: 11px; margin: 6px 2px 4px 0;}
+  .poll-question div {color: #a4a4a4; font-size: 9px;}
+
+  /* individualni pro shoutbox */
+  .sbox-item {border-top: 1px solid #dcdcdc; padding: 10px 0 10px 0;}
+  .sbox-input, .sbox .inputc {width: 90%;}
+  .sbox-posts {height: 350px; overflow: auto;}
+  .sbox form, .sbox table {margin: 0; padding: 0;}
+  .sbox table {border-collapse: collapse; width: 90%;}
+  .sbox table td.rpad {width: 44px;}
+  .sbox .cimage {display: block; margin: 2px 0 0 0;}
+
+/* prispevky / komentare */
+.posts-comments, .posts-book {border-top: 1px solid #dcdcdc;}
+.posts-comments {margin-top: 32px; padding-top: 5px;} .posts-book {padding-top: 12px;}
+.posts h2 {margin-bottom: 10px;}
+.posts-form {padding-bottom: 10px;}
+.posts-form-buttons {padding-left: 16px;}
+.posts-form-buttons img {vertical-align: middle;}
+.post-box{clear:both;}
+.post-head {margin-top: 20px;}
+.post-author {font-weight: bold; text-decoration: none;}
+.post-author-guest {font-weight: bold; color: #a03800;}
+.post-subject {font-weight: bold;}
+.post-info {color: #808080;}
+.post-actions a {font-size: 10px; text-decoration: none; padding-left: 4px;}
+.post-body {padding: 0; margin: 0;}
+.post-smiley {vertical-align: middle;}
+.post-answer {padding-left: 30px;clear:both;}
+.post-answer .post-info {font-size: 10px;}
+.post-answer .post-head {margin-top: 15px;}
+
+/* galerie */
+.gallery td {overflow: hidden;}
+.gallery img {margin: 3px; border: 1px solid #dcdcdc;}
+
+/* vzkazy */
+.messages-menu a {padding: 0 6px; text-decoration: none; border-right: 1px solid #dcdcdc;}
+.messages-menu a.active {font-weight: bold;}
+.messages-table {width: 672px; border: 1px solid #dcdcdc;}
+.messages-table td {padding: 5px 15px;}
+.messages-table a {text-decoration: none;}
+.messages-table a.notreaded {font-weight: bold;}
+
+/* tabulky (vypis uzivatelu, seznam temat fora) */
+.widetable, .widetable2 {width: 672px;}
+.widetable {border: 1px solid #dcdcdc;}
+.widetable td {width: 50%; padding: 6px 15px;}
+.widetable2 td {padding: 6px 10px;}
+
+/* profil */
+.profiletable td {padding: 3px 10px;}
+.profiletable .avatartd {padding: 5px;}
+.profiletable .note {padding: 0 5px 5px 0; width: 375px; overflow: auto;}
+.profiletable .posts-form-buttons {padding-left: 0;}
+.avatar {width: 96px; height: 128px; border: 1px solid #000000; overflow: hidden;}
+
+/* formulare */
+.areasmall {width: 370px; height: 100px;}
+.areamedium {width: 495px; height: 150px;}
+.inputsmall {width: 177px;}
+.inputmedium {width: 370px;}
+.inputc {width: 104px;}
+
+/* strankovani*/
+.paging {padding: 6px 0 3px 1px;}
+.paging span a {padding: 0 2px; text-decoration: none;}
+.paging a.act {text-decoration: underline;}
+
+/* systemove zpravy */
+.message1, .message2, .message3 {margin: 5px 0 20px 0; padding: 11px 5px 13px 48px; font-weight: bold; background-color: #ffffff; background-position: 5px 5px; background-repeat: no-repeat; border: 1px solid #e1e1e1;}
+.message1 ul, .message2 ul, .message3 ul {margin: 0; padding: 5px 0 0 15px;}
+.message1 {background-image: url("../images/icons/info.png");}
+.message2 {background-image: url("../images/icons/warning.png");}
+.message3 {background-image: url("../images/icons/error.png");}
+
+/* horizontalni cara */
+.hr {height: 10px; background-image: url("../images/system/hr.gif"); background-position: left center; background-repeat: repeat-x;}
+.hr hr {display: none;}
+
+/* ruzne */
+.pre {font-family: monospace; white-space: nowrap; display: block;}
+.bborder {padding-bottom: 8px; margin-bottom: 12px; border-bottom: 1px solid #dcdcdc;}
+.anchor {position: relative; top: -128px; height: 0px;}
+.backlink {display: block; font-weight: bold; padding-bottom: 15px;}
+.hint {color: #808080; font-size: 10px; padding: 0 4px;}
+.cimage {width: 68px; height: 22px; vertical-align: top; margin-left: 5px;}
+.exp {border-bottom: 1px dashed #808080; cursor: help;}
+.icon {vertical-align: middle; margin-top: -1px;}
+.right {float: right; margin: 1px 1px 5px 10px;}
+.left {float: left; margin: 1px 10px 5px 1px;}
+.wlimiter {width: 672px; overflow: auto;}
+.minip {padding: 0; margin: 0 0 4px 0;}
+.rpad {padding-right: 10px;}
+.lpad {padding-left: 10px;}
+.inline {display: inline;}
+.important {color: red;}
+.hidden {display: none;}
+.cleaner {clear: both;}
+.pad {padding: 10px;}
+
+/* slider */
+#featured{width:100%;position:relative;border:1px solid #46a3e0;height:200px;background:#fff;}
+#featured ul.ui-tabs-nav{position:absolute;top:0;left:424px;list-style:none;padding:0;margin:0;width:253px;border-left:1px solid #46a3e0;}
+#featured ul.ui-tabs-nav li{padding:0px 0;padding-left:0px;font-size:12px;color:#666;}
+#featured ul.ui-tabs-nav li img{float:left;margin:5px 5px;background:#fff;border:1px solid #46a3e0;}
+#featured ul.ui-tabs-nav li span{font-size:11px;font-family:Verdana;line-height:18px;padding-right:5px;padding-top:5px;}
+#featured li.ui-tabs-nav-item a{display:block;height:50px;color:#fff;background:url('../images/polozka.png');line-height:20px;text-decoration:none;}
+#featured li.ui-tabs-nav-item a:hover{background:url('../images/aktualni.png');}
+#featured li.ui-tabs-selected{}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{background:url('../images/aktualni.png');}
+#featured .ui-tabs-panel{width:424px;height:200px;background:#999;position:relative;overflow:hidden;}
+#featured .ui-tabs-panel .info{position:absolute;width:100%;top:135px;left:0;height:65px;background:url('../images/transparent-bg.png');}
+#featured .info h2{font-size:16px;font-family:Arial,serif;color:#fff;padding:5px;margin:0;overflow:hidden;text-shadow:1px 0 2px #000000}
+#featured .info .infoperex{margin:0 5px;font-family:Verdana;font-size:11px;line-height:15px;color:#fff;}
+#featured .info a{text-decoration:none;color:#fff;}
+#featured .info a:hover{text-decoration:underline;}
+#featured .ui-tabs-hide{display:none;}
+#featured .info .pokracovat{color:#46a3e0;text-decoration:underline;}

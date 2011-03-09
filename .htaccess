@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/([0-9a-zA-Z\.\-]*)\.(p|a)([0-9]*)\.html [NC]
+RewriteRule ([a-zA-Z.-]*)\.p([0-9]*)\.html /index.php?p=$2 [L,QSA]
+RewriteRule ([a-zA-Z.-]*)\.a([0-9]*)\.html /index.php?a=$2 [L,QSA]

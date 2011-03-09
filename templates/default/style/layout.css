@@ -1,0 +1,50 @@
+/* tagy */
+*{margin:0; padding:0;}
+body{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif; font-size:13px; color:#000000; text-align:center; background-color:#fff5e0;}
+a{color:#ff6600; text-decoration:underline;}
+blockquote,pre,.pre{border:1px solid #dcdcdc; border-left:6px solid #ff6600; padding:5px; overflow:auto; width:90%; line-height:140%;}
+p,pre,blockquote,table{margin:5px 0 15px 0;}
+p,pre,blockquote,table td,ul li,ol li{line-height:170%;}
+ul,ol{margin:5px 0 15px 25px;}
+h2,h3,h4{margin:15px 0 5px 0;}
+h1{font-size:26px; margin:0 0 10px 0;}
+h2{font-size:19px; color:#715a3a;}
+h3{font-size:15px; color:#ff6600;}
+h4{font-size:13px;}
+/* layout */
+#outer{background:transparent url("../images/outer.png") repeat-y scroll left top; width:958px; margin:0 auto;}
+#page{background:transparent url("../images/head.jpg") no-repeat scroll left top; width:890px; margin:0 auto; text-align:left;}
+/* head */
+#head{height:199px;}
+#head a{display:block; width:890px; height:199px; text-decoration:none; color:#ff6600; font-size:36px; font-weight:bold; font-family:Georgia,"Times New Roman",Times,serif;}
+#head span{position:relative; top:88px; left:48px; border-bottom:2px dashed #9F9F9F;}
+/* menu */
+#menu{padding:8px 15px;}
+#menu ul{margin:0; padding:0;}
+#menu li{display:inline; line-height:100%;}
+#menu li.first a{padding:0; background:none;}
+#menu a{font-family:Georgia,"Times New Roman",Times,serif; color:#000000; text-decoration:none; font-weight:bold; padding-left:13px;}
+#menu a.act{text-decoration:underline;}
+/* content */
+#content{width:720px; float:left; overflow:hidden;}
+#content-pad{padding:16px 28px 60px 16px;}
+#content h1{margin-bottom:8px;}
+#content p{line-height:160%; margin:5px 0 15px 0;}
+#content ul,#content ol{padding:2px 0 15px 18px;}
+/* column */
+#column{width:170px; float:right;  overflow:hidden;}
+#column-pad{padding:0 10px 20px 0;}
+#column h3{padding:5px 0; margin:0;}
+#column li{padding:2px 0;}
+/* footer */
+#footer{padding:8px 0; height:34px;
+/*border:1px solid #ffe4af;*/
+background:transparent url("../images/outer-bottom.png") no-repeat scroll center top;}
+#footer,#footer *{color:#707070; font-size:13px; text-decoration:none;}
+#footer a:hover{color:#000000;}
+/*attachments*/
+#attachments {border:1px solid #E9E9E9;padding:5px;}
+#attachments h3{margin:0px;}
+#attachments table{border-collapse:collapse;width:100%;margin:0px;}
+#attachments table .hl td{background:#E9E9E9;}
+#attachments table .icon{width:30px;text-align:center;}

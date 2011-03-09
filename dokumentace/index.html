@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+  <head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+
+  <title>Doplňková dokumentace SunLight XXL</title>
+
+  <style>
+
+  <!--
+
+      body   {color: black; padding: 5px 5px 5px 5px; background-color: #EEFFEB;}
+
+      h1   {font-size: 18px;}
+
+      h2   {font-size: 16px; border-bottom: 1px solid #7EBF73; color: #282828}
+
+      modul {padding: 2px 2px 2px 2px; background-color: rgb(215,215,215);}
+
+      .xxl {text-align: right; color: #138000;}
+
+      .date {text-align: right; color: #B3B3B3; font-size: 12px;}
+
+  //-->
+
+  </style>
+
+  </head>
+
+  <body>
+
+ <h1 class="xxl">Dodatková dokumentace systému Sunlight XXL</h1> 
+
+<p class="date">14/07/2010</p>
+
+<p>
+
+Verze <strong>XXL</strong> je z velké části totožná s <strong>7.4.2</strong>. Systém byl doplněn o moduly a vylepšení.
+
+</p>
+
+
+
+<h2>SEO PACK.</h2>
+
+<p>Variabilní titulek, popis a klíčová slova na každé stránce. Pokud nejsou vyplněna pole, ponechává systém výchozí hodnoty.</p>
+
+
+
+<h2>Poznámky v administraci.</h2>
+
+<p>Poznámkový blok na úvodní straně administrace.</p>
+
+
+
+<h2>Komentáře v galerii.</h2>
+
+<p>Byly přidány komentáře do galerie.</p>
+
+
+
+<h2>Změna vzhledu <i>(HCM modul)</i>.</h2>
+
+<p>Selekce vzhledu. Zápis HCM: <modul>[hcm]jv_template[/hcm]</modul>, v template.php: <modul>&lt;?php echo _parseHCM(&quot;[hcm]jv_template[/hcm]&quot;);?&gt;</modul>. </p>   
+
+
+
+<h2>Drobečková navigace <i>(HCM modul)</i>.</h2>
+
+<p>Zobrazení drobečkové navigace webu. Zápis HCM: <modul>[hcm]custom,drobeckova-navigace[/hcm]</modul>, v template.php: <modul>&lt;?php echo _parseHCM(&quot;[hcm]custom,drobeckova-navigace[/hcm]&quot;);?&gt;</modul>.</p> 
+
+
+
+<h2>Přihlašovací formulář <i>(HCM modul)</i>.</h2>
+
+<p>HCM modul s přihlašovacím formulářem. Zápis HCM: <modul>[hcm]custom,prihlasovaci-formular[/hcm]</modul>, v template.php: <modul>&lt;?php echo _parseHCM(&quot;[hcm]custom,prihlasovaci-formular[/hcm]&quot;);?&gt;</modul>.</p>
+
+
+
+<h2>Facebook - tlačítko „Líbí se mi“ pod článkem.</h2>
+
+<p>Aktivuje se v administraci.</p>
+
+
+
+<h2>Souhrné informace v administraci - komplexní statistika, uživatelé,...</h2>
+
+<p>Na úvodní straně se zobrazí uživatelé online, statistika a poslední komentáře.</p>
+
+
+
+<h2>Obrázky v perexu - zobrazení obrázků v perexu článků.</h2>
+
+<p>Obrázek musí mít název "idclanku.jpg/png/gif". <i>(Např. 1.jpg, 2.jpg)</i> a nahrává se do složky <strong>/upload/img/perex/</strong>. ID se zobrazuje d URL nebo d administraci. Rozlišení je <strong>94px x 72px</strong>.</p>
+
+
+
+
+
+<h2>Validace účtu pomocí mailu.</h2>
+
+<p>Po dokončení registrace uživatele se odešle email s aktivačním klíčem. Funkce se aktivuje v administraci. </p>
+
+
+
+<h2>Sitemap - mapa webu.</h2>
+
+<p>Generování <strong>sitemap.xml</strong> souboru. Sitemap se generuje v administraci.</p>
+
+
+
+<h2>Tiny editor.</h2>
+
+<p>Do systému byl přdián Tiny editor a TinyBrowser, který umožňuje nahrávání souborů. Obrázky editor automaticky ořezává na šířku <strong>500px</strong> <i>(výška se dopočítá sama)</i>.</p>
+
+
+
+<h2>Trvalý odkaz na komentář</h2>
+
+<p>Funkce se aktivuje v administraci. Zobrazí se odkaz (<i>kotva</i>) na komentář. </p>
+
+
+
+<h2>Odesílání článků na sociální sítě</h2>
+
+<p>Funkce se aktivuje v administraci. Možnost odesílání článků na sociální sítě.</p>
+
+
+
+<h2>Uživatelé online</h2>
+
+<p>HCM modul pro zobrazení uživatelů online za posledních 12 minut. Zápis HCM: <modul>[hcm]users,2,5[/hcm]</modul>, v template.php: <modul>&lt;?php echo _parseHCM(&quot;[hcm]users,2,5[/hcm]&quot;);?&gt;</modul>.</p>
+
+
+
+<h2>Avatary</h2>
+
+<p>Funkce se aktivuje v administraci. Zobrazení avatarů u komentářů a příspěvků. </p>
+
+
+
+<h2>Počítadlo stažení</h2>
+
+<p>Modul na počítání stažených souborů.</p>
+
+
+
+<h2>Newsletter</h2>
+
+<p>Zasílání novinek na registrované emaily. Zasílání emailů se provádí na stránce <strong>"Zaslání hromadného e-mailu"</strong> v administraci. Mazání na <strong>"Správa emailů (newsletter)"</strong>. Zápis HCM: <modul>[hcm]jv_newsletter[/hcm]</modul>, v template.php: <modul>&lt;?php echo _parseHCM(&quot;[hcm]jv_newsletter[/hcm]&quot;);?&gt;</modul>. </p>
+
+
+
+<h2>Statistika hledaných slov</h2>
+
+<p>Systém zanechává všechna hledaná slova, zapisuje se i autor.</p>
+
+
+
+  </body>
+
+</html>
+
