@@ -58,7 +58,7 @@ $output.="
 
 <tr valign='top'>
 <td class='rpad'><strong>".$_lang['admin.content.form.content']."</strong></td>
-<td><textarea name='content' class='areasmall_100pwidth' rows='9' cols='33'></textarea></td>
+<td><textarea name='content' class='areasmall_100pwidth codemirror xml' rows='9' cols='33'></textarea></td>
 </tr>
 
 <tr>

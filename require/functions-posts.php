@@ -10,12 +10,13 @@ if(!defined('_core')){exit;}
 
 /*---- vratit vypis prispevku / komentaru ----*/
 
-function _postsOutput($type, $home, $vars){
+function _postsOutput($type, $home, $vars, $force_locked=false){
 if (_fcborsystemcomments==1) {
   global $_lang;
 
     /*--- typ ---*/
     $desc="DESC ";
+    $ordercol = 'id';
     $countcond="type=".$type." AND xhome=-1 AND home=".$home;
     switch($type){
 
@@ -73,6 +74,7 @@ if (_fcborsystemcomments==1) {
       $canpost=$vars[1];
       $locked=_boolean($vars[2]);
       $replynote=true;
+      $ordercol = 'bumptime';
       break;
 
       //odpovedi v tematu
@@ -106,6 +108,8 @@ if (_fcborsystemcomments==1) {
       break;
 
     }
+
+    if($force_locked) $locked = true;
 
     /*--- vystup ---*/
     $output="
@@ -145,7 +149,7 @@ if (_fcborsystemcomments==1) {
     }
     else{
       if(!$locked){$output.="<a href='"._addGetToLink(_indexOutput_url, "addpost&amp;page=".$paging[2])."#posts'><strong>".$addlink." &gt;</strong></a>";}
-      else{$output.="<img src='"._templateImage("icons/bubble.gif")."' alt='stop' class='icon' /> <strong>".$_lang['posts.locked'.(($type==5)?'3':'')]."</strong>";}
+      else{$output.="<img src='"._templateImage("icons/lock.png")."' alt='stop' class='icon' /> <strong>".$_lang['posts.locked'.(($type==5)?'3':'')]."</strong>";}
     }
 
     $output.="</div>";
@@ -164,7 +168,7 @@ if (_fcborsystemcomments==1) {
     /*--- vypis ---*/
     if(_pagingmode==1 or _pagingmode==2){$output.=$paging[0];}
 
-    $query=mysql_query("SELECT ".(($type!=5)?"*":"id,author,guest,subject,time,ip")." FROM `"._mysql_prefix."-posts` WHERE type=".$posttype." AND xhome=".$xhome." AND home=".$home." ORDER BY id ".$desc.$paging[1]);
+    $query=mysql_query("SELECT ".(($type!=5)?"*":"id,author,guest,subject,time,ip,locked,bumptime")." FROM `"._mysql_prefix."-posts` WHERE type=".$posttype." AND xhome=".$xhome." AND home=".$home." ORDER BY ".$ordercol.' '.$desc.$paging[1]);
     if(mysql_num_rows($query)!=0){
 
       //vypis prispevku nebo temat
@@ -287,7 +291,7 @@ if (_fcborsystemcomments==1) {
               $lastpost="-";
             }
 
-          $output.="<tr><td><a href='index.php?m=topic&amp;id=".$item['id']."'>".$item['subject']."</a></td><td>".$author."</td><td>"._formatTime($item['time'])."</td><td>".$lastpost."</td><td>".mysql_result(mysql_query("SELECT COUNT(id) FROM `"._mysql_prefix."-posts` WHERE type=5 AND xhome=".$item['id']), 0)."</td></tr>\n";
+          $output.="<tr".($item['locked'] ? ' class="topic-locked"' : '')."><td>".($item['locked'] ? '<img src="'._templateImage('icons/lock.png').'" class="icon" alt="locked" /> ' : '')."<a href='index.php?m=topic&amp;id=".$item['id']."'>".$item['subject']."</a></td><td>".$author."</td><td>"._formatTime($item['time'])."</td><td>".$lastpost."</td><td>".mysql_result(mysql_query("SELECT COUNT(id) FROM `"._mysql_prefix."-posts` WHERE type=5 AND xhome=".$item['id']), 0)."</td></tr>\n";
           }
         $output.="</table><br />\n\n";
         if(_pagingmode==2 or _pagingmode==3){$output.=$paging[0]."<br />";}

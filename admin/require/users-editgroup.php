@@ -30,6 +30,7 @@ if($continue){
     $rights_array=array(
     "changeusername",
     "postcomments",
+    "locktopics",
     "unlimitedpostaccess",
     "artrate",
     "pollvote",

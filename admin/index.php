@@ -143,7 +143,9 @@ $output.='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/
 '.(_lightbox?'<script type="text/javascript" src="'._indexroot.'libs/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript" src="'._indexroot.'libs/tr-hover/tr-hover.js"></script>
 <script type="text/javascript" src="'._indexroot.'remote/colorbox.php"></script>
-<link href="'._indexroot.'libs/colorbox/colorbox.css" rel="stylesheet" type="text/css" />':'').'
+<link href="'._indexroot.'libs/colorbox/colorbox.css" rel="stylesheet" type="text/css" />':'').(_codemirror ? '
+<link rel="stylesheet" href="modules/codemirror/editor.css" type="text/css" media="screen" />
+<script type="text/javascript" src="modules/codemirror/codemirror.js"></script>' : '').'
 <title>'._title.' - '.$_lang['admin.title'].' &gt; '.$admintitle.'</title>
 </head>
 

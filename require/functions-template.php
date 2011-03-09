@@ -80,7 +80,7 @@ echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="keywords" content="'.$keywords.'" />
 <meta name="description" content="'.$description.'" />
 <meta name="author" content="'._author.'" />
-<meta name="generator" content="SunLight CMS XXL" />
+<meta name="generator" content="SunLight CMS 7.4.2 XXL" />
 <meta name="robots" content="index, follow" />
 <!-- CSS XXL -->
 <link href="'._indexroot.'libs/style/xxl.css" type="text/css" rel="stylesheet" />

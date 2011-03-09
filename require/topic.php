@@ -33,9 +33,9 @@ if(!$need2login){
 
     
 //zpetny odkaz, titulek
-$module="<a href='"._addGetToLink(_linkRoot($homedata['id']), "page="._resultPagingGetItemPage($homedata['var1'], "posts", "id>".$id." AND xhome=-1 AND type=5 AND home=".$homedata['id']))."' class='backlink'>&lt; ".$_lang['global.return']."</a>\n";
+$module="<a href='"._addGetToLink(_linkRoot($homedata['id']), "page="._resultPagingGetItemPage($homedata['var1'], "posts", "bumptime>".$query['bumptime']." AND xhome=-1 AND type=5 AND home=".$homedata['id']))."' class='backlink'>&lt; ".$_lang['global.return']."</a>\n";
 if(_template_autoheadings){$module.="<h1>".$homedata['title']."</h1>\n<div class='hr'><hr /></div>\n";}
-if(_postAccess($query)){$editlink=" <a href='index.php?m=editpost&amp;id=".$id."'><img src='"._templateImage("icons/edit.gif")."' alt='edit' class='icon' /></a>";}else{$editlink="";}
+if(_postAccess($query)){$editlink=" <a href='index.php?m=editpost&amp;id=".$id."'><img src='"._templateImage("icons/edit.gif")."' alt='edit' class='icon' /></a>".(_loginright_locktopics ? "&nbsp;<a href='index.php?m=locktopic&amp;id=".$id."'><img src='"._templateImage("icons/".(($query['locked'] == 1) ? 'un' : '')."lock.png")."' alt='lock' class='icon' /></a>": '');}else{$editlink="";}
 if($query['guest']==""){$author=_linkUser($query['author'], "post-author");}else{$author="<span class='post-author-guest' title='".$query['ip']."'>".$query['guest']."</span>";}
 $module.="
 <h2>".$_lang['posts.topic'].": ".$query['subject']._linkRSS($id, 6).$editlink."</h2>
@@ -62,7 +62,7 @@ $module.="<p>"._parsePost($query['text'])."</p><br clear='all' />";
 
 //odpovedi
 require_once(_indexroot.'require/functions-posts.php');
-$module.=_postsOutput(6, $homedata['id'], array(_commentsperpage, _publicAccess($homedata['var3']), $homedata['var2'], $id));
+$module.=_postsOutput(6, $homedata['id'], array(_commentsperpage, _publicAccess($homedata['var3']), $homedata['var2'], $id),($query['locked'] == 1));
 
 }
 else{

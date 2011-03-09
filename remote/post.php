@@ -152,10 +152,15 @@ require(_indexroot."core.php");
   if($continue and $continue2 and $text!="" and _captchaCheck()){
     if($posttype==4 or _iplogCheck(5)){
       $newid=_getNewID("posts");
-      mysql_query("INSERT INTO `"._mysql_prefix."-posts` (id,type,home,xhome,subject,text,author,guest,time,ip) VALUES (".$newid.",".$posttype.",".$posttarget.",".$xhome.",'".$subject."','".$text."',".$author.",'".$guest."',".time().",'"._userip."')");
+      mysql_query("INSERT INTO `"._mysql_prefix."-posts` (id,type,home,xhome,subject,text,author,guest,time,ip,bumptime) VALUES (".$newid.",".$posttype.",".$posttarget.",".$xhome.",'".$subject."','".$text."',".$author.",'".$guest."',".time().",'"._userip."',".(($posttype == 5 && $xhome == -1) ? 'UNIX_TIMESTAMP()' : '0').")");
       if(!_loginright_unlimitedpostaccess and $posttype!=4){_iplogUpdate(5);}
       $return=1;
-      
+
+        // topicy - aktualizace bumptime
+        if($posttype == 5 && $xhome != -1) {
+            mysql_query("UPDATE `"._mysql_prefix."-posts` SET bumptime=UNIX_TIMESTAMP() WHERE id=".$xhome);
+        }
+
         //shoutboxy - odstraneni prispevku za hranici limitu
         if($posttype==4){
           $pnum=mysql_result(mysql_query("SELECT COUNT(id) FROM `"._mysql_prefix."-posts` WHERE type=4 AND home=".$posttarget), 0);

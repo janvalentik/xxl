@@ -93,7 +93,7 @@ $isfirst=true;
 
     <tr valign='top'>
     <td class='rpad'><strong>".$_lang['admin.content.form.content']."</strong></td>
-    <td><textarea name='".$item['id']."-content' class='areasmall_100pwidth' rows='9' cols='33'>"._htmlStr($item['content'])."</textarea></td>
+    <td><textarea name='".$item['id']."-content' class='areasmall_100pwidth codemirror xml' rows='9' cols='33'>"._htmlStr($item['content'])."</textarea></td>
     </tr>
 
     <tr>

@@ -83,7 +83,7 @@ $output.="
 ".$_lang['admin.index.stat-down']."<b>"._parseHCM("[hcm]custom,filecounter,../upload/download/[/hcm]")."</b><br /><br />
 
 "._parseHCM("[hcm]custom,statshcm[/hcm]")."<br />
-<strong>".$_lang['global.version'].":</strong> <span style=\"color:#008000;\">XXL 1.0.0</span><br />
+<strong>".$_lang['global.version'].":</strong> <span style=\"color:#008000;\">XXL 1.0.1</span><br />
 <span id='hook'></span>
 <strong>PHP:</strong> ".PHP_VERSION."<br />
 <strong>MySQL:</strong> ".$mysqlver."<br />

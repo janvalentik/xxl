@@ -40,6 +40,7 @@ if(isset($_POST['template'])){
   array("bbcode" ,                true,  0),
   array("smileys",                true,  0),
   array("lightbox",               true,  0),
+  array("codemirror",             true,  0),
   array("printart",               true,  0),
   array("ratemode",               false, 2),
   array("rss",                    true,  0),
@@ -311,7 +312,7 @@ $output.='
 
     <tr onmouseover="highlight_row(this, 1);" onmouseout="highlight_row(this, 0);">
   <td class="rpad"><strong>'.$_lang['admin.settings.info.footer'].'</strong></td>
-  <td colspan="2"><textarea name="footer" rows="9" cols="33" class="areasmallwide">'._footer.'</textarea></td>
+  <td colspan="2"><textarea name="footer" rows="9" cols="33" class="areasmallwide codemirror xml">'._footer.'</textarea></td>
   </tr>
 
   </table>
@@ -358,7 +359,7 @@ $output.='
   <td class="rpad"><strong>'.$_lang['admin.settings.mods.rules'].'</strong></td>
   <td colspan="2">
   <p>'.$_lang['admin.settings.mods.rules.help'].'</p>
-  <textarea name="rules" rows="9" cols="33" class="areasmallwide">'._htmlStr(_rules).'</textarea>
+  <textarea name="rules" rows="9" cols="33" class="areasmallwide codemirror xml">'._htmlStr(_rules).'</textarea>
   </td>
   </tr>
 
@@ -368,7 +369,7 @@ $output.='
   <td class="rpad"><strong>'.$_lang['admin.settings.mods.actmail'].'</strong></td>
   <td colspan="2">
   <p>'.$_lang['admin.settings.mods.actmail.help'].'</p>
-  <textarea name="actmail" rows="9" cols="33" class="areasmallwide">'._actmail.'</textarea>
+  <textarea name="actmail" rows="9" cols="33" class="areasmallwide codemirror xml">'._actmail.'</textarea>
   </td>
   </tr>
 
@@ -430,6 +431,12 @@ $output.='
   <td class="rpad"><strong>'.$_lang['admin.settings.mods.lightbox'].'</strong></td>
   <td><input type="checkbox" name="lightbox" value="1"'._checkboxActivate(_lightbox).' /></td>
   <td class="lpad">'.$_lang['admin.settings.mods.lightbox.help'].'</td>
+  </tr>
+
+  <tr onmouseover="highlight_row(this, 1);" onmouseout="highlight_row(this, 0);">
+  <td class="rpad"><strong>'.$_lang['admin.settings.mods.codemirror'].'</strong></td>
+  <td><input type="checkbox" name="codemirror" value="1"'._checkboxActivate(_codemirror).' /></td>
+  <td class="lpad">'.$_lang['admin.settings.mods.codemirror.help'].'</td>
   </tr>
 
     <tr onmouseover="highlight_row(this, 1);" onmouseout="highlight_row(this, 0);">
@@ -711,7 +718,7 @@ $output.='
   <td class="rpad">'.$_lang['admin.settings.pocitadlo'].'</td>
   <td colspan="2">
   <p>'.$_lang['admin.settings.pocitadlo.help'].'</p>
-  <textarea name="pocitadlo" rows="9" cols="33" class="areasmallwide">'._htmlStr(_pocitadlo).'</textarea>
+  <textarea name="pocitadlo" rows="9" cols="33" class="areasmallwide codemirror xml">'._htmlStr(_pocitadlo).'</textarea>
   </td>
   </tr>
   

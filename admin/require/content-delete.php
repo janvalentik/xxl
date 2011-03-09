@@ -6,6 +6,7 @@ if(!defined('_core')){exit;}
 /*--- pripava promennych ---*/
 $continue=false;
 $done=false;
+$path=_indexroot."upload/img/perex/";
 if(isset($_GET['id'])){
 $id=intval($_GET['id']);
 $query=mysql_query("SELECT id,title,type,ord FROM `"._mysql_prefix."-root` WHERE id=".$id);
@@ -34,6 +35,10 @@ if($continue){
       case 2:
       $rquery=mysql_query("SELECT id,home1,home2,home3 FROM `"._mysql_prefix."-articles` WHERE home1=".$id." OR home2=".$id." OR home3=".$id);
         while($item=mysql_fetch_array($rquery)){
+          if(file_exists($path.$item['id'].".jpg")){unlink($path.$item['id'].".jpg");}
+          if(file_exists($path.$item['id'].".gif")){unlink($path.$item['id'].".gif");}
+          if(file_exists($path.$item['id'].".png")){unlink($path.$item['id'].".png");}
+          recursive_remove_directory(_indexroot."upload/article_".$item['id']);
           if($item['home1']==$id and $item['home2']==-1 and $item['home3']==-1){mysql_query("DELETE FROM `"._mysql_prefix."-posts` WHERE type=2 AND home=".$item['id']); mysql_query("DELETE FROM `"._mysql_prefix."-articles` WHERE id=".$item['id']); continue;} //delete
           if($item['home1']==$id and $item['home2']!=-1 and $item['home3']==-1){mysql_query("UPDATE `"._mysql_prefix."-articles` SET home1=home2 WHERE id=".$item['id']); mysql_query("UPDATE `"._mysql_prefix."-articles` SET home2=-1 WHERE id=".$item['id']); continue;} //2->1
           if($item['home1']==$id and $item['home2']!=-1 and $item['home3']!=-1){mysql_query("UPDATE `"._mysql_prefix."-articles` SET home1=home2 WHERE id=".$item['id']); mysql_query("UPDATE `"._mysql_prefix."-articles` SET home2=home3 WHERE id=".$item['id']); mysql_query("UPDATE `"._mysql_prefix."-articles` SET home3=-1 WHERE id=".$item['id']); continue;} //2->1,3->2

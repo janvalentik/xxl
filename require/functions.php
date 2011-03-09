@@ -339,13 +339,13 @@ function _checkVersion($type, $version, $get=false){
 
   //pole verzi podle typu
   switch($type){
-  case "database": $cmp_versions=array("1.0.0"); break;
-  case "database_backup": $cmp_versions=array("1.0.0"); break;
-  case "language_file": $cmp_versions=array("1.0.0"); break;
+  case "database": $cmp_versions=array("1.0.1"); break;
+  case "database_backup": $cmp_versions=array("1.0.1"); break;
+  case "language_file": $cmp_versions=array("1.0.1"); break;
   case "template": $cmp_versions=array("2.0"); break;
   default: $cmp_versions=array(); break;
   }
-  
+
   //vystup
   if(!$get){return in_array($version, $cmp_versions);}
   else{return $cmp_versions;}
@@ -565,6 +565,7 @@ return array(
 "adminposts",
 "changeusername",
 "unlimitedpostaccess",
+"locktopics",
 "postcomments",
 "artrate",
 "pollvote",

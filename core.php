@@ -31,7 +31,7 @@
   //konstanty
   define('_core', '1');
   define('_nl', "\n");
-  define('_systemversion', 'XXL 1.0.0');
+  define('_systemversion', 'XXL 1.0.1');
   define('_sessionprefix', md5($server.$database.$user.$prefix)."-");
   define('_rewrite_ext', '.html');
   define('_userip', $_SERVER['REMOTE_ADDR']);

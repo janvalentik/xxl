@@ -102,6 +102,14 @@ if(_publicAccess(!_notpublicsite) or (isset($_GET['m']) and in_array($_GET['m'],
         define('_indexOutput_title', $_lang['mod.editpost']);
       break;
 
+      // uzamknuti prispevku (forum topic)
+      case "locktopic":
+        define('_indexOutput_url', "index.php?m=locktopic");
+        require (_indexroot."require/locktopic.php");
+        define('_indexOutput_content', $module);
+        define('_indexOutput_title', $_lang['mod.locktopic']);
+        break;
+
       //vzkazy
       case "messages":
       if(_messages){

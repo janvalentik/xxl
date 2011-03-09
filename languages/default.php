@@ -4,7 +4,7 @@ $_lang=array(
 
 
 //main
-"main.version"=>"1.0.0",
+"main.version"=>"1.0.1",
 "main.languagespecification"=>"cs",
 
 
@@ -210,6 +210,14 @@ $_lang=array(
 "mod.editpost.failed"=>"Nebyl zadán text!",
 "mod.editpost.delete"=>"odstranit při uložení",
 "mod.editpost.deleted"=>"Příspěvek byl odstraněn.",
+"mod.locktopic"=>"Zamknutí tématu",
+"mod.locktopic2"=>"Odemknutí tématu",
+"mod.locktopic.text"=>"Chystáte se uzamknout téma &quot;%s&quot; - chcete pokračovat?",
+"mod.locktopic.text2"=>"Chystáte se odemknout téma &quot;%s&quot; - chcete pokračovat?",
+"mod.locktopic.submit"=>"Ano, uzamknout téma",
+"mod.locktopic.submit2"=>"Ano, odemknout téma",
+"mod.locktopic.ok"=>"Téma uzamčeno",
+"mod.locktopic.ok2"=>"Téma odemčeno.",
 "mod.ulist.p"=>"Kliknutím na uživatelské jméno zobrazíte profil zvoleného uživatele.",
 "mod.topic"=>"Téma",
 
@@ -620,6 +628,8 @@ $_lang=array(
 "admin.settings.mods.smileys.help"=>"povolit používání grafických smajlíků v příspěvcích",
 "admin.settings.mods.lightbox"=>"ColorBox",
 "admin.settings.mods.lightbox.help"=>"používat integrovaný <a href='http://colorpowered.com/colorbox/' target='_blank'>ColorBox</a> pro obrázky v galeriích",
+"admin.settings.mods.codemirror"=>"Codemirror",
+"admin.settings.mods.codemirror.help"=>"používát codemirror ke zvýraznění html syntaxe",
 "admin.settings.mods.printart"=>"Tisk článku",
 "admin.settings.mods.printart.help"=>"povolit zobrazení článku ve formátu pro tisk",
 "admin.settings.mods.ratemode"=>"Hodnocení článku",
@@ -712,6 +722,8 @@ $_lang=array(
 "admin.users.groups.artrate.help"=>"umožnit hodnocení článků",
 "admin.users.groups.pollvote"=>"Hlasovat v anketách",
 "admin.users.groups.pollvote.help"=>"umožnit hlasování v anketách",
+"admin.users.groups.locktopics"=>"Zamykat témata",
+"admin.users.groups.locktopics.help"=>"umožní zamykat a odemykat témata na fóru",
 "admin.users.groups.unlimitedpostaccess"=>"Bez limitů",
 "admin.users.groups.unlimitedpostaccess.help"=>"zrušit časový limit pro správu a zasílání příspěvků",
 "admin.users.groups.adminposts"=>"Spravovat cizí příspěvky",

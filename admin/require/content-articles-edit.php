@@ -269,7 +269,7 @@ $output.="
 </tr>
 <tr valign='top'>
 <td class='rpad'><strong>".$_lang['admin.content.form.perex']."</strong></td>
-<td><textarea name='perex' rows='9' cols='94' class='areabigperex'>"._htmlStr($query['perex'])."</textarea></td>
+<td><textarea name='perex' rows='9' cols='94' class='areabigperex codemirror xml'>"._htmlStr($query['perex'])."</textarea></td>
 </tr>
 <tr>
 <td class='rpad'><strong>".$_lang['admin.content.form.perex.img']."</strong></td>
@@ -281,12 +281,12 @@ $output.="
   <table id='ae-table'>
   <tr valign='top'>
     <td id='content-cell'>
-      <textarea name='content' rows='25' cols='68' id='wysiwygtarget'>"._htmlStr($query['content'])."</textarea>
+      <textarea name='content' rows='25' cols='68' class='wysiwyg_editor".((!_wysiwyg || !_loginwysiwyg) ? ' codemirror xml' : '')."'>"._htmlStr($query['content'])."</textarea>
     </td>
     <td id='is-cell'>
       <div>
       <h2>".$_lang['admin.content.form.infobox']."</h2>
-      <textarea name='infobox' rows='10' cols='20'>"._htmlStr($query['infobox'])."</textarea><br /><br />
+      <textarea name='infobox' rows='10' cols='20' class='codemirror xml'>"._htmlStr($query['infobox'])."</textarea><br /><br />
       <h2>".$_lang['admin.content.form.settings']."</h2>
       <p>
       <label><input type='checkbox' name='public' value='1'"._checkboxActivate($query['public'])." /> ".$_lang['admin.content.form.public']."</label>
