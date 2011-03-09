@@ -3,7 +3,7 @@
 	tinyMCE.init({
 		theme : "advanced",
 		mode : "exact",
-		elements : "wysiwygtarget",
+		elements : "wysiwygtarget,perex",
     relative_urls : true,
     document_base_url : "../../../",
     entity_encoding : "raw",

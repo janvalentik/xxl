@@ -1,9 +1,9 @@
 <?php
 
 $server=    "127.0.0.1";
-$user=      "janvalentik_cz";
-$password=  "";
-$database=  "janvalentik_cz";
+$user=      "user";
+$password=  "password";
+$database=  "database";
 $prefix=    "xxl";
 
 ?>
