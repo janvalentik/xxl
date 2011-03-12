@@ -218,7 +218,7 @@ $content.="
 
 // Facebook - Líbí se mi
 if (_fcbbutton){
-  $content.="<iframe allowtransparency=\"true\" src=\"http://www.facebook.com/widgets/like.php?href="._url."/"._indexOutput_url."\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; width:450px; height:80px\"></iframe>\n";
+  $content.="<iframe allowtransparency=\"true\" src=\"http://www.facebook.com/plugins/like.php?href="._url."/"._indexOutput_url."\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; width:450px; height:80px\"></iframe>\n";
 }
 // Facebook.com Share
 if (_socialfcb){
