@@ -72,7 +72,7 @@ global $query,$_lang;
   $title=($query['seotitle']!='' ? $query['seotitle']:(_titletype==1? _title.' '._titleseparator.' '._indexOutput_title:_indexOutput_title.' '._titleseparator.' '._title));
   $keywords=($query['keywords']!='' ? $query['keywords']:_keywords);
   $description=($query['description']!='' ? $query['description']:_description);
-  $usertemplate=(isset($_SESSION['template']) ? $_SESSION['template']:_template);
+  $usertemplate=(isset($_SESSION['jv_template']) ? $_SESSION['jv_template']:_template);
 
 echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
