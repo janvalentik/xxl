@@ -2108,4 +2108,12 @@ function recursive_remove_directory($directory, $empty=FALSE)
      }
      return TRUE;
  }
+
+function is_home(){
+  if(!isset($_GET['a']) && !isset($_GET['m']) && (!isset($_GET['p']) || (($xQuery = mysql_query("SELECT `id` FROM `"._mysql_prefix."-root` WHERE `intersection`=-1 AND `type`!=4 ORDER BY `ord` LIMIT 1")) !== false && mysql_num_rows($xQuery) !== 0 && $_GET['p'] == mysql_result($xQuery, 0)))) {
+    return  true;
+  } else {
+    return false;
+  }
+} 
 ?>
