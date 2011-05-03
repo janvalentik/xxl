@@ -11,7 +11,6 @@ if(!defined('_core')){exit;}
 /*---- vratit vypis prispevku / komentaru ----*/
 
 function _postsOutput($type, $home, $vars, $force_locked=false){
-if (_fcborsystemcomments==1) {
   global $_lang;
 
     /*--- typ ---*/
@@ -32,6 +31,7 @@ if (_fcborsystemcomments==1) {
       $canpost=_loginright_postcomments;
       $locked=_boolean($vars);
       $replynote=true;
+      $fcbcomments=_fcborsystemcomments;
       break;
 
       //komentare u clanku
@@ -46,6 +46,7 @@ if (_fcborsystemcomments==1) {
       $canpost=_loginright_postcomments;
       $locked=_boolean($vars);
       $replynote=true;
+      $fcbcomments=_fcborsystemcomments;
       break;
 
       //prispevky v knize
@@ -60,6 +61,7 @@ if (_fcborsystemcomments==1) {
       $canpost=$vars[1];
       $locked=_boolean($vars[2]);
       $replynote=true;
+      $fcbcomments=1;
       break;
 
       //temata ve foru
@@ -75,6 +77,7 @@ if (_fcborsystemcomments==1) {
       $locked=_boolean($vars[2]);
       $replynote=true;
       $ordercol = 'bumptime';
+      $fcbcomments=1;
       break;
 
       //odpovedi v tematu
@@ -91,6 +94,7 @@ if (_fcborsystemcomments==1) {
       $replynote=false;
       $desc="";
       $countcond="type=5 AND xhome=".$xhome." AND home=".$home;
+      $fcbcomments=1;
       break;
 
       //komentare v galerii
@@ -105,12 +109,13 @@ if (_fcborsystemcomments==1) {
       $canpost=_loginright_postcomments;
       $locked=_boolean($vars);
       $replynote=true;
+      $fcbcomments=_fcborsystemcomments;
       break;
 
     }
 
     if($force_locked) $locked = true;
-
+if ($fcbcomments==1) {
     /*--- vystup ---*/
     $output="
     <div class='anchor'><a name='posts'></a></div>
