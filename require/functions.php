@@ -229,7 +229,7 @@ return $output."\n";
 /*---- vratit kod obrazku galerie ----*/
 
 function _galleryImage($img, $lightboxid, $height=0){
-$content="<a href='".(!_isAbsolutePath($img['prev'])?_indexroot:'').$img['full']."' rel=\"lightbox\" ".(($img['title']!="")?" title='".$img['title']."'":'').">";
+$content="<a href='".(!_isAbsolutePath($img['prev'])?_indexroot:'').$img['full']."' rel=\"lightbox[".$lightboxid."]\" ".(($img['title']!="")?" title='".$img['title']."'":'').">";
 if($img['prev']!=""){$content.="<img src='".(!_isAbsolutePath($img['prev'])?_indexroot:'').$img['prev']."' alt='".(($img['title']!="")?$img['title']:"img")."' />";}
 else{$content.="<img src='"._indexroot."remote/imgprev.php?id=".$img['id'].(($height!=0)?"&amp;h=".$height:'')."' alt='".(($img['title']!="")?$img['title']:"img")."' />";}
 $content.="</a>\n";
