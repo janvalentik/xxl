@@ -25,7 +25,7 @@ function _HCM_recentposts($limit=null, $stranky="", $typ=null){
   
     //nacteni titulku a odkazu na stranku
     switch($item['type']){
-    case 1: case 3: $homelink=_linkRoot($item['home']); $hometitle=mysql_fetch_array(mysql_query("SELECT title FROM `"._mysql_prefix."-root` WHERE id=".$item['home'])); break;
+    case 1: case 3: case 7: $homelink=_linkRoot($item['home']); $hometitle=mysql_fetch_array(mysql_query("SELECT title FROM `"._mysql_prefix."-root` WHERE id=".$item['home'])); break;
     case 2: $homelink=_linkArticle($item['home']); $hometitle=mysql_fetch_array(mysql_query("SELECT title FROM `"._mysql_prefix."-articles` WHERE id=".$item['home'])); break;
   
       case 5:
