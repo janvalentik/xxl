@@ -182,7 +182,7 @@ optgroup option {padding-left: 16px;}
 
 img {border: 0;}
 small {color: #<?php echo $smoke_text; ?>;}
-td {font-size: 12px; padding: 0px;}
+td {font-size: 12px; padding: 0px;vertical-align:top;}
 
 /* hlavicka */
 #header {font-family: Georgia, "Times New Roman", Times, serif; font-size: 24px; color: #<?php echo $scheme_contrast; ?>; background-color: #<?php echo $scheme; ?>; padding: 10px; border-bottom: 3px solid #<?php echo $scheme_dark; ?>;}
@@ -292,6 +292,9 @@ td {font-size: 12px; padding: 0px;}
   #gallery-edittable a[rel=lightbox\[1\]] img {border: 1px solid #<?php echo $smoke_text; ?>;}
   #gallery-insertform-cell {}
 
+  #news{border-collapse:collapse;}
+  #news td{border:none; border-bottom: 1px solid #<?php echo $smoke_line; ?>;}
+  
 /* tridy */
 a.normal {color: #<?php echo $text; ?>;}
 a.invisible {color: #<?php echo $smoke_text; ?>;}
