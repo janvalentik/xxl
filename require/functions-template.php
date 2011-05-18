@@ -22,7 +22,7 @@ if(!_notpublicsite or _loginindicator){
 
   //obsah
   if(_template_boxes_parent!=""){$output.="<"._template_boxes_parent.">\n";}
-  $query=mysql_query("SELECT title,content FROM `"._mysql_prefix."-boxes` WHERE visible=1 AND `column`=".$column.$public." ORDER BY ord");
+  $query=mysql_query("SELECT id,title,content FROM `"._mysql_prefix."-boxes` WHERE visible=1 AND `column`=".$column.$public." ORDER BY ord");
     while($item=mysql_fetch_array($query)){
 
       //kod titulku
@@ -30,7 +30,7 @@ if(!_notpublicsite or _loginindicator){
       else{$title="";}
 
     /*titulek venku*/    if(_template_boxes_title_inside==0 and $title!=""){$output.=$title;}
-    /*starttag polozky*/ if(_template_boxes_item!=""){$output.="<"._template_boxes_item." class='box-item'>\n";}
+    /*starttag polozky*/ if(_template_boxes_item!=""){$output.="<"._template_boxes_item." class='box-item' id='box-".$item['id']."'>\n";}
     /*titulek vevnitr*/  if(_template_boxes_title_inside==1 and $title!=""){$output.=$title;}
     /*obsah*/            $output.=_parseHCM($item['content']);
     /*endtag polozky*/   if(_template_boxes_item!=""){$output.="\n</"._template_boxes_item.">";}
