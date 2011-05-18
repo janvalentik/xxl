@@ -119,7 +119,7 @@ foreach ($arrFeeds as $key => $value) {
     if ($key==5) break;
     $output.="<tr><td>";
     $now=strtotime(str_replace('/', '', $value['date']));
-    $output.=date('d.m.Y',$now)." - <strong>".$value['title']."</strong><br /><br />";
+    $output.=date('d.m.Y',$now)." - <strong><a target='_blank' title='Přejít na celý článek' href='".$value['link']."'>".$value['title']."</a></strong><br /><br />";
     $output.=eregi_replace('(((f|ht){1}tp://)[-a-zA-Z0-9@:%_+.~#?&//=]+)', '<a href="\\1" target=_blank>\\1</a>', $value['desc']) . "<br />";
     $output.="</td></tr>";
 }
