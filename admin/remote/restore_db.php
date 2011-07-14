@@ -77,8 +77,7 @@ if(is_uploaded_file($_FILES['backup']['tmp_name'])){
               //vlozeni dat
               foreach($contents as $line){
               if($line==""){continue;}
-              $line=_safeStr($line);
-              mysql_query("INSERT INTO `"._mysql_prefix."-".$line) or die (mysql_error());
+              mysql_query("INSERT INTO `"._mysql_prefix."-".$line);
               if(mysql_error()!=false){_tmp_restoreMessage($_lang['admin.other.backup.restore.queryerror']);}
               }
 
