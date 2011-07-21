@@ -57,12 +57,11 @@ input, textarea {font-size: 13px; font-family: inherit;}
 
   /* individualni pro shoutbox */
   .sbox-item {border-top: 1px solid #dcdcdc; padding: 10px 0 10px 0;}
-  .sbox-input, .sbox .inputc {width: 90%;}
+  .sbox-input{width: 90%;}
   .sbox-posts {height: 350px; overflow: auto;}
   .sbox form, .sbox table {margin: 0; padding: 0;}
   .sbox table {border-collapse: collapse; width: 90%;}
   .sbox table td.rpad {width: 44px;}
-  .sbox .cimage {display: block; margin: 2px 0 0 0;}
 
 /* prispevky / komentare */
 .posts-comments, .posts-book {border-top: 1px solid #dcdcdc;}
@@ -114,7 +113,7 @@ input, textarea {font-size: 13px; font-family: inherit;}
 .areamedium {width: 495px; height: 150px;}
 .inputsmall {width: 177px;}
 .inputmedium {width: 370px;}
-.inputc {width: 104px;}
+.inputc {width: 160px; height: 46px; font-family: monospace; font-size: 40px; text-transform: uppercase;}
 
 /* strankovani*/
 .paging {padding: 6px 0 3px 1px;}
@@ -138,7 +137,7 @@ input, textarea {font-size: 13px; font-family: inherit;}
 .anchor {position: relative; top: -128px; height: 0px;}
 .backlink {display: block; font-weight: bold; padding-bottom: 15px;}
 .hint {color: #808080; font-size: 10px; padding: 0 4px;}
-.cimage {width: 68px; height: 22px; vertical-align: top; margin-left: 5px;}
+.cimage {width: 160px; height: 46px; vertical-align: top; margin-left: 5px; border: 1px solid #dcdcdc;}
 .exp {border-bottom: 1px dashed #808080; cursor: help;}
 .icon {vertical-align: middle; margin-top: -1px;}
 .right {float: right; margin: 1px 1px 5px 10px;}
